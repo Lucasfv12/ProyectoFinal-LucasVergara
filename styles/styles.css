@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*  font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-image: url('../img/diaPokemon.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2, p {
+    padding-bottom: 20px;
+}
+
+.icono_header {
+    height: auto;
+    width: 50px;
+}
+
+main.container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.nombreUsuario, .eleccion, .commerce {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    width: 20% 30% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
+}
+
+.eleccion ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.eleccion ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-list img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.pokeMo {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    animation: moveButton 2s infinite;
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.imgpoke {
+    transition: 0.3s ease;
+}
+
+.imgpoke:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#nombreUsuario {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.continuar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* BOTONES*/
+
+#startButton {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#toggleButton {
+background-color: transparent;
+border: none;
+}
+
+.btnComprar {
+    margin-top: 2rem;
+}
+
+#btnContinuar {
+    align-items: center;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* TERMINA BOTONES*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    max-width: 100%; 
+    border-radius: 8px;
+}
+
+.dark-mode {
+    background-image: url('../img/nochePokemon.png');
+}
+
+#resultado {
+    margin-top: 1rem;
+}
+
+#mensajeEleccion {
+    margin-top: 1rem;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 8px;
+    }
+
+    header, footer {
+        padding: 0.5rem;
+    }
+
+    main.container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nombreUsuario, .eleccion, .commerce {
+        width: calc(100% - 2rem);
+    }
+
+    .eleccion ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pokeMo, .pokemon-list img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pokeMo {
+        display: flex;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .btnComprar {
+        margin-top: 1rem;
+    }
+
+    .logo_header{
+        height: auto;
+        width: 150px;
+    }
+}
+
+/*CSS ENCUENTRO*/
+
+#encuentroCaterpie {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#encuentroCaterpie h2 {
+    margin-bottom: 10px;
+}
+
+#encuentroCaterpie img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#encuentroCaterpie button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#encuentroCaterpie button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/*CSS EVOLUCIÓN*/
+
+.evolucion {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.evolucion img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.evolucion img:hover {
+    transform: scale(1.1);
+}
+
+.evolucion button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

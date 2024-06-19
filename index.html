@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Pokemon</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="img/pokebola.ico">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <img class="icono_header" src="./img/pokebola.ico" alt="pokebola">
+        <img class="logo_header" src="./img/aventuraPokemon.png" alt="logo">
+    </div>
+</header>
+
+<main class="container">
+    <section class="nombreUsuario">
+        <h1>Escribe tu nombre para comenzar con la elección</h1>
+        <input type="text" id="nombreUsuario" placeholder="Introduce tu nombre aquí">
+        <button id="startButton">Iniciar Selección</button>
+        <div id="resultado"></div>
+        <div id="errorNombre" class="error"></div>
+    </section>
+
+    <section>
+        <div class="contenedorMo">
+            <button id="toggleButton"><img class="pokeMo" src="./img/Gastly.png" alt=""></button>
+        </div>
+    </section>
+
+    <section class="eleccion">
+        <h2>Aquí recibirás tu primer pokemón y luego podrás obtener tus primeras pokeballs y la comida para tu viaje.</h2>
+    
+        <h2>Recuerda los pokemons que tenemos para tu elección</h2>
+        <ul>
+            <li><img class="imgpoke" src="img/Bulbasaur.png" alt="Bulbasaur" id="Bulbasaur"><br><b>Bulbasaur</b></li>
+            <li><img class="imgpoke" src="img/Charmander.png" alt="Charmander" id="Charmander"><br><b>Charmander</b></li>
+            <li><img class="imgpoke" src="img/Squirtle.png" alt="Squirtle" id="Squirtle"><br><b>Squirtle</b></li>
+        </ul>
+        <div id="mensajeEleccion"></div>
+    </section>
+    
+    <section class="commerce">
+        <div>
+            <h2>Tienda Pokemon</h2>
+            <p>Consigue las mejores pokeballs para atrapar a tus pokemons favoritos</p>
+            <div class="container">
+
+<!-- Cards de productos  -->
+
+                <div class="card">
+                    <figure>
+                        <img src="img/pokebola.png" alt="Pokebola">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pokebola</h3>
+                        <button id="btnPokebola" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/PokebolaMaster.png" alt="PokebolaMaster">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pokebola Master</h3>
+                        <button id="btnPokebolaMaster" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/PokebolaBlue.png" alt="PokebolaBlue">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pokebola Blue</h3>
+                        <button id="btnPokebolaBlue" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/PokebolaUltra.png" alt="PokebolaUltra">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pokebola Ultra</h3>
+                        <button id="btnPokebolaUltra" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/Bayas.png" alt="Bayas">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Bayas</h3>
+                        <button id="btnBayas" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/BolsaCaramelos.png" alt="BolsaDeCaramelos">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Caramelos</h3>
+                        <button id="btnCaramelos" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/HyperPocion.png" alt="Poción">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Poción</h3>
+                        <button id="btnPocion" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/arroz.png" alt="Arroz">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Arroz</h3>
+                        <button id="btnArroz" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="img/arroz.png" alt="Pokochos">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pokochos</h3>
+                        <button id="btnPokochos" class="btnComprar">Elegir</button>
+                    </div>
+                </div>
+
+<!-- terminan cards -->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="encuentroCaterpie">
+        <h2>¡Te has encontrado con un Caterpie salvaje!</h2>
+        <img src="img/Caterpie.png" alt="Caterpie" id="imgCaterpie">
+        <div id="mensajeEncuentro"></div>
+        <button id="btnAtacar">Atacar</button>
+        <button id="btnCapturar">Capturar</button>
+    </section>
+
+    <section class="evolucion" id="seccionEvolucion"></section>
+
+    <section class="continuar">
+        <button id="btnContinuar">Continuar el viaje</button>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Pokémon Fan Page</p>
+</footer>
+
+<script src="./js/script.js"></script>
+<script src="./js/modoOscuro.js"></script>
+<script src="./js/batallaCaterpie.js"></script>
+<script src="./js/evolucion.js"></script>
+
+</body>
+</html>
